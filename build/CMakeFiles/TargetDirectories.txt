@@ -1,0 +1,6 @@
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/CMakeFiles/rebuild_cache.dir
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/CMakeFiles/edit_cache.dir
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/CMakeFiles/game.dir
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/engine/CMakeFiles/edit_cache.dir
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/engine/CMakeFiles/rebuild_cache.dir
+/home/ulysses/Documentos/jogos/ije-fga-UnB/build/engine/CMakeFiles/engine.dir

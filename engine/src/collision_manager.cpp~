@@ -1,0 +1,11 @@
+#include "collision_manager.hpp"
+#include "game.hpp"
+
+using namespace engine;
+
+ ~CollisionManager();
+
+void CollisionManager::getCollisions(){
+
+
+}

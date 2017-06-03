@@ -1,0 +1,33 @@
+#ifndef CODECOMPONENT
+#define CODECOMPONENT
+
+#include "sdl2core.hpp"
+#include "components/image.hpp"
+
+namespace engine{
+  class CodeComponent : public Component{
+
+  public:
+    CodeComponent(GameObject &gameObject, std::string name): Component(gameObject,name){}
+    ~CodeComponent():{}
+
+    bool init();
+    bool shutdown();
+    
+    void update();
+
+
+
+    
+    
+    void set_aceleration_force();
+
+    void update();
+    
+  private:
+
+
+  }
+}
+
+#endif
