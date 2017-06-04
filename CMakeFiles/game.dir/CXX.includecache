@@ -31,6 +31,8 @@ monsterAI.hpp
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/monsterAI.hpp
 player.hpp
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/player.hpp
+soldier.hpp
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/soldier.hpp
 
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/menu_scene.cpp
 menu_scene.hpp
@@ -49,6 +51,16 @@ stdlib.h
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/player.cpp
 player.hpp
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/player.hpp
+
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/soldier.cpp
+soldier.hpp
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/soldier.hpp
+game.hpp
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/game.hpp
+stdio.h
+-
+stdlib.h
+-
 
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/stage1_scene.cpp
 stage1_scene.hpp
@@ -252,6 +264,14 @@ include/components/image.hpp
 game.hpp
 include/game.hpp
 
+include/soldier.hpp
+iostream
+-
+components/component.hpp
+include/components/component.hpp
+components/animation_controller.hpp
+include/components/animation_controller.hpp
+
 include/stage1_scene.hpp
 scene.hpp
 -
@@ -259,4 +279,8 @@ components/animation.hpp
 include/components/animation.hpp
 components/animation_controller.hpp
 include/components/animation_controller.hpp
+player.hpp
+include/player.hpp
+soldier.hpp
+include/soldier.hpp
 

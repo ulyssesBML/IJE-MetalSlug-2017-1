@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/menu_scene.cpp" "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir/src/menu_scene.cpp.o"
   "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/monsterAI.cpp" "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir/src/monsterAI.cpp.o"
   "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/player.cpp" "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir/src/player.cpp.o"
+  "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/soldier.cpp" "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir/src/soldier.cpp.o"
   "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/stage1_scene.cpp" "/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir/src/stage1_scene.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

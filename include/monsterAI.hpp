@@ -22,7 +22,7 @@ private:
 
 
   float monster_move = 4;
-  const int ground = 552;
+  const int ground = 720;
   const int gravity = 1;
   const float jumpF = 2;
   float dy;

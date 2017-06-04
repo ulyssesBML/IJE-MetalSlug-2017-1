@@ -9,13 +9,17 @@ int timestep;
 
 bool MonsterAI::init(){
      _main_game_object->main_positionY = ground - _main_game_object->main_height;
+     _main_game_object->main_positionX = 1500;
+     _main_game_object->setState(GameObject::State::disabled);
 }
 
 void MonsterAI::update(){
 
+  m_monster_controler->play_animation("monster_walk",true);
+  
   if(Game::instance.timer->getTicks() > timestep){
     timestep =  Game::instance.timer->getTicks() + 1000;
-    monster_move = (rand() % 7) + 1;
+    monster_move = (rand() % 4);
   }
 
   m_monster_controler->play_animation("monster_walk");
@@ -36,6 +40,10 @@ void MonsterAI::update(){
     //dy += jumpF;
    }
 
+
+  if(Game::instance.collision_manager->checkCollision(_main_game_object,"bullet_player")){
+    m_monster_controler->play_animation("monster_damage");
+  }
 
   processPos();
 }

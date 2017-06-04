@@ -244,6 +244,33 @@ src/player.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/soldier.o: src/soldier.cpp.o
+
+.PHONY : src/soldier.o
+
+# target to build an object file
+src/soldier.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/soldier.cpp.o
+.PHONY : src/soldier.cpp.o
+
+src/soldier.i: src/soldier.cpp.i
+
+.PHONY : src/soldier.i
+
+# target to preprocess a source file
+src/soldier.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/soldier.cpp.i
+.PHONY : src/soldier.cpp.i
+
+src/soldier.s: src/soldier.cpp.s
+
+.PHONY : src/soldier.s
+
+# target to generate assembly for a file
+src/soldier.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/soldier.cpp.s
+.PHONY : src/soldier.cpp.s
+
 src/stage1_scene.o: src/stage1_scene.cpp.o
 
 .PHONY : src/stage1_scene.o
@@ -278,8 +305,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... game"
+	@echo "... edit_cache"
 	@echo "... engine"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
@@ -293,6 +320,9 @@ help:
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/soldier.o"
+	@echo "... src/soldier.i"
+	@echo "... src/soldier.s"
 	@echo "... src/stage1_scene.o"
 	@echo "... src/stage1_scene.i"
 	@echo "... src/stage1_scene.s"

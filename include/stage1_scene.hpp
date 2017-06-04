@@ -4,6 +4,8 @@
 #include <scene.hpp>
 #include "components/animation.hpp"
 #include "components/animation_controller.hpp"
+#include "player.hpp"
+#include "soldier.hpp"
 
 using namespace engine;
 
@@ -20,6 +22,23 @@ class Stage1Scene : public Scene{
   void game_logic();
 
     private:
+  GameObject *tank;
+  GameObject *background;
+  GameObject *player;
+  GameObject *soldier1;
+  Player *player_controller;
+  Soldier *soldier1_controller;
+  ImageComponent *back_img;
+
+  
+  GameObject *bullet1;
+  GameObject *bullet2;
+  GameObject *bullet3;
+  GameObject *bullet4;
+  GameObject *bullet5;
+  GameObject *bullet6;
+  GameObject *bullet7;
+  GameObject *bullet8;
 };
 
 #endif

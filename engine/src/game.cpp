@@ -97,7 +97,7 @@ bool Game::createWindow(){
                 current_state = State::main_loop_change_scene;
 
             while(current_state != State::exit_loop){
-
+                current_scene->game_logic();
                 if(handle_scene_changes() == false)
                     break;
 
@@ -124,7 +124,6 @@ bool Game::createWindow(){
 		//	current_scene->get_collide_objects();
 		collision_manager->getCollisions(current_scene->get_collide_objects());
 		current_scene->update();
-                current_scene->game_logic();
                 //Limpa o Canvas visualizado pelo  usuário
                 SDL_RenderClear(main_canvas);
                 //Desenha no buffer secundário.
@@ -219,3 +218,4 @@ bool Game::handle_scene_changes(){
 
     return true;
 }
+

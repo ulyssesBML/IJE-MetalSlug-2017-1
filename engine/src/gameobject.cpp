@@ -7,7 +7,6 @@ using namespace engine;
 
 bool GameObject::init()
 {
-  //    INFO("Init game object " << m_name);
 
     for(auto id_componentlist: main_components)
     {
@@ -50,8 +49,8 @@ bool GameObject::draw(){
     for(auto component: main_components[std::type_index(typeid(Animation))]){
         /*Caso o componente encontrado esteja com estado habilitado, converte ele para um componente de imagem
           e o desenha na tela*/
-        if(component->state() == Component::State::enabled)
-            (dynamic_cast<Animation *>(component))->draw();
+       if(component->state() == Component::State::enabled)
+	  (dynamic_cast<Animation *>(component))->draw();
     }
 
     //

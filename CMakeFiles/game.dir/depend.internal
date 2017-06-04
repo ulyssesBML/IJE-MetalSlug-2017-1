@@ -20,6 +20,7 @@ CMakeFiles/game.dir/src/main.cpp.o
  include/menu_scene.hpp
  include/monsterAI.hpp
  include/player.hpp
+ include/soldier.hpp
  include/stage1_scene.hpp
 CMakeFiles/game.dir/src/menu_scene.cpp.o
  /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/menu_scene.cpp
@@ -68,6 +69,22 @@ CMakeFiles/game.dir/src/player.cpp.o
  engine/include/scene.hpp
  engine/include/sdl2core.hpp
  include/player.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o
+ /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/soldier.cpp
+ engine/include/Keyboard.hpp
+ engine/include/Timer.hpp
+ engine/include/collision_manager.hpp
+ engine/include/components/animation.hpp
+ engine/include/components/animation_controller.hpp
+ engine/include/components/component.hpp
+ engine/include/components/image.hpp
+ engine/include/game.hpp
+ engine/include/gameobject.hpp
+ engine/include/logger.hpp
+ engine/include/mouse.hpp
+ engine/include/scene.hpp
+ engine/include/sdl2core.hpp
+ include/soldier.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o
  /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/src/stage1_scene.cpp
  engine/include/Keyboard.hpp
@@ -83,4 +100,6 @@ CMakeFiles/game.dir/src/stage1_scene.cpp.o
  engine/include/mouse.hpp
  engine/include/scene.hpp
  engine/include/sdl2core.hpp
+ include/player.hpp
+ include/soldier.hpp
  include/stage1_scene.hpp

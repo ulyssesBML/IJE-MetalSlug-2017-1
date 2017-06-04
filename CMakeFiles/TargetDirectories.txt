@@ -1,6 +1,6 @@
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/rebuild_cache.dir
-/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/edit_cache.dir
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/game.dir
-/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/engine/CMakeFiles/edit_cache.dir
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/CMakeFiles/edit_cache.dir
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/engine/CMakeFiles/rebuild_cache.dir
 /home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/engine/CMakeFiles/engine.dir
+/home/ulysses/Documentos/jogos/IJE-MetalSlug-2017-1/engine/CMakeFiles/edit_cache.dir

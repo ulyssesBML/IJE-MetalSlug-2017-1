@@ -19,6 +19,7 @@ CMakeFiles/game.dir/src/main.cpp.o: engine/include/sdl2core.hpp
 CMakeFiles/game.dir/src/main.cpp.o: include/menu_scene.hpp
 CMakeFiles/game.dir/src/main.cpp.o: include/monsterAI.hpp
 CMakeFiles/game.dir/src/main.cpp.o: include/player.hpp
+CMakeFiles/game.dir/src/main.cpp.o: include/soldier.hpp
 CMakeFiles/game.dir/src/main.cpp.o: include/stage1_scene.hpp
 
 CMakeFiles/game.dir/src/menu_scene.cpp.o: src/menu_scene.cpp
@@ -68,6 +69,22 @@ CMakeFiles/game.dir/src/player.cpp.o: engine/include/scene.hpp
 CMakeFiles/game.dir/src/player.cpp.o: engine/include/sdl2core.hpp
 CMakeFiles/game.dir/src/player.cpp.o: include/player.hpp
 
+CMakeFiles/game.dir/src/soldier.cpp.o: src/soldier.cpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/Keyboard.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/Timer.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/collision_manager.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/components/animation.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/components/animation_controller.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/components/component.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/components/image.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/game.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/gameobject.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/logger.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/mouse.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/scene.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: engine/include/sdl2core.hpp
+CMakeFiles/game.dir/src/soldier.cpp.o: include/soldier.hpp
+
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: src/stage1_scene.cpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/Keyboard.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/Timer.hpp
@@ -82,5 +99,7 @@ CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/logger.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/mouse.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/scene.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: engine/include/sdl2core.hpp
+CMakeFiles/game.dir/src/stage1_scene.cpp.o: include/player.hpp
+CMakeFiles/game.dir/src/stage1_scene.cpp.o: include/soldier.hpp
 CMakeFiles/game.dir/src/stage1_scene.cpp.o: include/stage1_scene.hpp
 

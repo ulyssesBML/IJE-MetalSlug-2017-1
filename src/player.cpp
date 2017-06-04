@@ -3,7 +3,6 @@
 bool canJump = true;
 bool jump = false;
 bool isFalling = false;
-bool isRight = true;
 
 int maxHeight = 200;
 float gravity = 1;
@@ -14,16 +13,36 @@ float prev_position_y;
 
 float dy = 0;
 
-bool Player::init(){return true;}
+bool Player::init(){
+  isRight = true;
+  return true;
+}
 
 // ================================================= GAME LOGIC ====================================================
 void Player::update(){
+  if(!damage)
+    animCtrl->play_animation("player_idle");
 
-  animCtrl->play_animation("player_idle");
-    gravityF();
+  gravityF();
     jump_player();
     move_player();
     attack_player();
+
+
+    if(Game::instance.collision_manager->checkCollision(_main_game_object,"monster")  ||
+       Game::instance.collision_manager->checkCollision(_main_game_object,"bullet")){
+          animCtrl->play_animation("player_damage");
+	  damage = true;
+    }
+
+    if(Game::instance.timer->getTicks() > Ttime){
+      Ttime =  Game::instance.timer->getTicks() + 1000;
+      damage = false;
+    }
+
+
+
+    
 
     processPos();
 }
@@ -40,7 +59,7 @@ void Player::attack_player(){
     }
 
     if(attack){
-        animCtrl->play_animation("player_attack");
+      animCtrl->play_animation("player_attack");
     }else{
 
     }
@@ -64,25 +83,25 @@ void Player::move_player(){
         walkL= false;
     }
 //
-    if(walkR && (_main_game_object->main_positionX+_main_game_object->main_width)<800){
-        isRight = true;
+    if(walkR && (_main_game_object->main_positionX+_main_game_object->main_width)<900){
+        isRight = false;
 	animCtrl->play_animation("player_running");
-        animCtrl->flipping(false);
+	animCtrl->flipping(isRight);
 	_main_game_object->main_positionX += moveForce;
 
     } else if(walkL && (_main_game_object->main_positionX)>=0 ){
-        isRight = false;
+        isRight = true;
         animCtrl->play_animation("player_running");
-        animCtrl->flipping(true);
+        animCtrl->flipping(isRight);
         _main_game_object->main_positionX -= moveForce;
     }
-    if(_main_game_object->main_positionX >= 700 && walkR){
+    if(_main_game_object->main_positionX >= 800 && walkR){
       animCtrl->play_animation("player_running");
-      back->move_img_rect(10);
+      back->move_img_rect(7);
     }
     if(_main_game_object->main_positionX <= 40 && walkL){
       animCtrl->play_animation("player_running");
-      back->move_img_rect(-10);
+      back->move_img_rect(-7);
     }
 
 

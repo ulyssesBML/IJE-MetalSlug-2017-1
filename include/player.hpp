@@ -14,7 +14,7 @@ class Player : public Component{
 
   Player(GameObject &_main_game_object, std::string component_id, AnimationControllerComponent *animC,ImageComponent *background):
     Component(_main_game_object,component_id), animCtrl(animC),back(background),
-      walkR(false), walkL(false), jump(false), stand(false), attack(false), damageBool(false){}
+      walkR(false), walkL(false), jump(false), damage(false), attack(false), damageBool(false){}
 
 
   
@@ -39,13 +39,14 @@ class Player : public Component{
     GameObject *plataform;
     GameObject *monster;
 
+     bool attack;
+     bool isRight;
     private:
-        unsigned int jumptime;
+        unsigned int Ttime;
         bool walkR;
         bool walkL;
         bool jump;
-        bool stand;
-        bool attack;
+        bool damage;
         bool damageBool;
         AnimationControllerComponent *animCtrl;
         AnimationControllerComponent *monster_controler;
