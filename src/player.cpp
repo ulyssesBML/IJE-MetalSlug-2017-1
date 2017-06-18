@@ -6,7 +6,7 @@ bool isFalling = false;
 
 int maxHeight = 200;
 float gravity = 1;
-float jumpF = 20;
+float jumpF = 25;
 float moveForce = 7;
 float monster_move = 4;
 float prev_position_y;
@@ -23,7 +23,7 @@ void Player::update(){
   if(!damage)
     animCtrl->play_animation("player_idle");
 
-  gravityF();
+    gravityF();
     jump_player();
     move_player();
     attack_player();
@@ -39,10 +39,6 @@ void Player::update(){
       Ttime =  Game::instance.timer->getTicks() + 1000;
       damage = false;
     }
-
-
-
-    
 
     processPos();
 }
@@ -83,7 +79,7 @@ void Player::move_player(){
         walkL= false;
     }
 //
-    if(walkR && (_main_game_object->main_positionX+_main_game_object->main_width)<900){
+    if(walkR && (_main_game_object->main_positionX+_main_game_object->main_width)<1000){
         isRight = false;
 	animCtrl->play_animation("player_running");
 	animCtrl->flipping(isRight);
@@ -95,11 +91,11 @@ void Player::move_player(){
         animCtrl->flipping(isRight);
         _main_game_object->main_positionX -= moveForce;
     }
-    if(_main_game_object->main_positionX >= 800 && walkR){
+    if(_main_game_object->main_positionX >= 900 && walkR){
       animCtrl->play_animation("player_running");
       back->move_img_rect(7);
     }
-    if(_main_game_object->main_positionX <= 40 && walkL){
+    if(_main_game_object->main_positionX <= 100 && walkL){
       animCtrl->play_animation("player_running");
       back->move_img_rect(-7);
     }

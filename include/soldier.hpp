@@ -28,6 +28,9 @@ private:
   const int gravity = 1;
   const float jumpF = 2;
   float dy;
+
+  bool returnRight;
+  bool returnLeft;
   
   GameObject* m_player;
   AnimationControllerComponent* m_monster_controler;

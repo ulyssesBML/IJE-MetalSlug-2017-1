@@ -12,6 +12,7 @@
 #include "monsterAI.hpp"
 #include "player.hpp"
 #include "soldier.hpp"
+#include "plataform.hpp"
 
 using namespace engine;
 
@@ -27,8 +28,6 @@ int main(int, char **){
 
     GameObject background("background");
     ImageComponent backgroundImage(background,"imageBackground", "assets/sprites/menu_m.png");
-    MusicComponent musica(background, "musicaBackground", "assets/music/gm.wav");
-
     GameObject bNew("bNew");
     Animation image_bNew(bNew,"imageBNew", "assets/sprites/bNew.png",510/2,46,2);
 
@@ -38,7 +37,6 @@ int main(int, char **){
 
     //Adiciona components aos gameobjects
     background.add_component(backgroundImage);
-    background.add_component(musica);
     bNew.add_component(image_bNew);
 
     //adiciona game objects ao menu
@@ -108,32 +106,32 @@ int main(int, char **){
     ground_stage1.main_width = 1280;
     ground_stage1.main_height = 200;
 
-    plataform.main_positionY = 450;
+    plataform.main_positionY = 400;
     plataform.main_positionX = 500; 
     
-    ImageComponent backgroundForest(background_stage1,"backgroundForest", "assets/sprites/ms_back.png");
+    ImageComponent backgroundForest(background_stage1,"backgroundForest", "assets/sprites/n_back.png");
     backgroundForest.set_back_rect(1280, 768);
 
 
-    Animation img_plataform(plataform, "plataform", "assets/sprites/plat.png",536/2,642/6, 12);
-    img_plataform.setDelay(200);
-
-     plataform.add_component(img_plataform);
+    ImageComponent img_plataform(plataform, "plataform", "assets/sprites/plat.png");
+    Plataform plataform_logic(plataform, "plataform_logic",&backgroundForest);
+    plataform.add_component(plataform_logic);
+    plataform.add_component(img_plataform);
 
     
     AnimationControllerComponent animCtrl(player, "animationController");
     AnimationControllerComponent monster_controler(player, "monster_controler");
 
-    Animation player_idle(player, "playerIdle", "assets/sprites/idle.png",60,243/3, 3);
-    player_idle.setDelay(200);
+    Animation player_idle(player, "playerIdle", "assets/sprites/idle.png",89,364/3, 3);
+    player_idle.setDelay(100);
 
-    Animation player_running(player, "playerRunning", "assets/sprites/walk.png" ,68, 816/9, 9);
+    Animation player_running(player, "playerRunning", "assets/sprites/walk.png" ,97, 1092/9, 9);
     player_running.setDelay(100);
 
-    Animation player_attack(player, "playerAttack", "assets/sprites/attack.png" ,104, 159/2, 2);
+    Animation player_attack(player, "playerAttack", "assets/sprites/attack.png" ,156, 238/2, 2);
     player_attack.setDelay(100);
 
-    Animation player_damage(player, "playerDamage", "assets/sprites/damage.png" ,68, 816/9, 9);
+    Animation player_damage(player, "playerDamage", "assets/sprites/damage.png" ,102, 1224/9, 9);
     player_damage.setDelay(50);
 
 
@@ -157,10 +155,10 @@ int main(int, char **){
     //soldier
     GameObject soldier1("soldier1");
     AnimationControllerComponent soldier1_controler(soldier1, "monster_controler");
-    Animation soldier1_walk(soldier1, "soldier_walk", "assets/sprites/s_walk.png" ,800/12, 89, 12);
+    Animation soldier1_walk(soldier1, "soldier_walk", "assets/sprites/s_walk.png" ,92, 1459/11, 11);
     soldier1_walk.setDelay(50);
 
-    Animation soldier1_attack(soldier1, "soldier_attack", "assets/sprites/sol_attack.png" ,141, 280/3, 3);
+    Animation soldier1_attack(soldier1, "soldier_attack", "assets/sprites/sol_attack.png" ,211, 405/3, 3);
     soldier1_attack.setDelay(50);
 
 

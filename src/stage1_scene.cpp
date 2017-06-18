@@ -34,13 +34,6 @@ void Stage1Scene::game_logic(){
  
   bullet1 = &get_game_object("bullet1");
   bullet2 = &get_game_object("bullet2");
-  bullet3 = &get_game_object("bullet3");
-  bullet4 = &get_game_object("bullet4");
-  bullet5 = &get_game_object("bullet5");
-  bullet6 = &get_game_object("bullet6");
-  bullet7 = &get_game_object("bullet7");
-  bullet8 = &get_game_object("bullet8");
-
   //./bullet
 
 

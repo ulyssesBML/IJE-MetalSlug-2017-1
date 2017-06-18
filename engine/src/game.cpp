@@ -1,6 +1,6 @@
 #include "game.hpp"
 
-#define FRAME 60.0
+#define FRAME 30.0
 using namespace engine;
 
 Game Game::instance;
@@ -121,7 +121,6 @@ bool Game::createWindow(){
                         }
                     }
                 }
-		//	current_scene->get_collide_objects();
 		collision_manager->getCollisions(current_scene->get_collide_objects());
 		current_scene->update();
                 //Limpa o Canvas visualizado pelo  usuário
