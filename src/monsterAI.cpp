@@ -11,10 +11,12 @@ bool MonsterAI::init(){
      _main_game_object->main_positionY = ground - _main_game_object->main_height;
      _main_game_object->main_positionX = 1500;
      _main_game_object->setState(GameObject::State::disabled);
+     life = 10;
+     dead = false;
 }
 
 void MonsterAI::update(){
-
+  if(!dead){
   m_monster_controler->play_animation("monster_walk",true);
   
   if(Game::instance.timer->getTicks() > timestep){
@@ -43,9 +45,21 @@ void MonsterAI::update(){
 
   if(Game::instance.collision_manager->checkCollision(_main_game_object,"bullet_player")){
     m_monster_controler->play_animation("monster_damage");
+    
+    if(Game::instance.timer->getTicks() > time_damage){
+      life--;
+      std::cout<<life<<std::endl;
+      time_damage = Game::instance.timer->getTicks()+1000;
+    }
+    if(life <=0){
+      dead = true;
+    }
   }
-
   processPos();
+  }
+  else{
+    Game::instance.change_scene("Main Menu");
+  }
 }
 void MonsterAI::processPos()
 {

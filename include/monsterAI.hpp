@@ -16,6 +16,8 @@ public:
   bool init();
   void update();
 
+  bool dead;
+  
 private:
   void gravityF();
   void processPos();
@@ -26,7 +28,10 @@ private:
   const int gravity = 1;
   const float jumpF = 2;
   float dy;
+
+  int life;
   
+  int time_damage;
   GameObject* m_player;
   AnimationControllerComponent* m_monster_controler;
   

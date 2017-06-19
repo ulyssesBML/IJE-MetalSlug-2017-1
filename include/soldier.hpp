@@ -29,10 +29,12 @@ private:
   const float jumpF = 2;
   int unsigned timestep;
   float dy;
+  int life;
 
   bool returnRight;
   bool returnLeft;
   
+  int  time_damage;
   GameObject* m_player;
   AnimationControllerComponent* m_monster_controler;
   

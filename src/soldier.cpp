@@ -6,12 +6,12 @@
 Soldier::~Soldier(){}
 
 int movestep;
-int  time_damage;
 int life = 2;
 
 bool Soldier::init(){
   _main_game_object->main_positionY = ground - _main_game_object->main_height;
   _main_game_object->main_positionX = 1500;
+  life = 2;
 }
 
 void Soldier::update(){
@@ -53,7 +53,6 @@ void Soldier::update(){
   if(Game::instance.collision_manager->checkCollision(_main_game_object,"bullet_player")){
     if(Game::instance.timer->getTicks() > time_damage){
       life--;
-      std::cout<<life<<std::endl;
       time_damage = Game::instance.timer->getTicks() + 1000;
     }
     if(life <= 0){
@@ -100,7 +99,6 @@ void Soldier::update(){
 }
 void Soldier::processPos()
 {
-  //std::cout<<dy<<std::endl;
   _main_game_object->main_positionY -= dy;   // current velocity components.
 }
 

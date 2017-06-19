@@ -14,6 +14,7 @@ float prev_position_y;
 float dy = 0;
 
 bool Player::init(){
+  back->imagePart->x = 0;
   isRight = true;
   return true;
 }

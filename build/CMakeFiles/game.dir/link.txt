@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -W -Wall -pedantic -std=c++11 -Wshadow -O2 -g  -rdynamic CMakeFiles/game.dir/src/main.cpp.o CMakeFiles/game.dir/src/menu_scene.cpp.o CMakeFiles/game.dir/src/stage1_scene.cpp.o  -o game engine/libengine.a -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer 
