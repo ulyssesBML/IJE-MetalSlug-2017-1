@@ -161,13 +161,18 @@ int main(int, char **){
     Animation soldier1_attack(soldier1, "soldier_attack", "assets/sprites/sol_attack.png" ,211, 405/3, 3);
     soldier1_attack.setDelay(50);
 
+    Animation soldier1_death(soldier1, "soldier_death", "assets/sprites/ds.png" ,149, 2160/16, 16);
+    soldier1_death.setDelay(100);
+
 
     Soldier soldier1_ai(soldier1, "soldier1_ai",&player,&soldier1_controler);
     soldier1_controler.add_animation("soldier_walk",soldier1_walk);
     soldier1_controler.add_animation("soldier_attack",soldier1_attack);
+    soldier1_controler.add_animation("soldier_death",soldier1_death);
 
     soldier1.add_component(soldier1_walk);
     soldier1.add_component(soldier1_attack);
+    soldier1.add_component(soldier1_death);
     soldier1.add_component(soldier1_controler);
     soldier1.add_component(soldier1_ai);
     

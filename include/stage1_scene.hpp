@@ -33,12 +33,9 @@ class Stage1Scene : public Scene{
   
   GameObject *bullet1;
   GameObject *bullet2;
-  GameObject *bullet3;
-  GameObject *bullet4;
-  GameObject *bullet5;
-  GameObject *bullet6;
-  GameObject *bullet7;
-  GameObject *bullet8;
+
+  bool bulletDir1;
+  bool bulletDir2;
 };
 
 #endif

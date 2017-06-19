@@ -15,22 +15,29 @@ bool Soldier::init(){
 }
 
 void Soldier::update(){
-
-  m_monster_controler->play_animation("soldier_walk",true);
+  if(life > 0 ){
+    m_monster_controler->play_animation("soldier_walk",true);
+  }
+  else{
+    m_monster_controler->play_animation("soldier_death");
+  }
   
   monster_move = 4;
   gravityF();
 
-  if(m_player->main_positionX - 200 > _main_game_object->main_positionX){
+  if(m_player->main_positionX > _main_game_object->main_positionX){
     isRight = false;
-    m_monster_controler->flipping(true);
+  }
+  else{
+    isRight = true;
+  }
+  
+   m_monster_controler->flipping(!isRight);
+  if(m_player->main_positionX - 400 > _main_game_object->main_positionX){
     _main_game_object->main_positionX += monster_move;
   }
 
-  else if (m_player->main_positionX + 200 < _main_game_object->main_positionX){
-
-    isRight = true;
-    m_monster_controler->flipping(false);
+  else if (m_player->main_positionX + 400 < _main_game_object->main_positionX){
     _main_game_object->main_positionX -= monster_move;
   }
 
@@ -50,10 +57,16 @@ void Soldier::update(){
       time_damage = Game::instance.timer->getTicks() + 1000;
     }
     if(life <= 0){
-      _main_game_object->main_positionX = 2000;
       attack = false;
-      life = 4;
-      _main_game_object->setState(GameObject::State::disabled);
+      if(timestep == 0)
+	timestep = Game::instance.timer->getTicks()+100;
+
+      if(Game::instance.timer->getTicks() > timestep){
+	_main_game_object->main_positionX = 2000;
+	timestep = 0;
+	life = 4;
+	_main_game_object->setState(GameObject::State::disabled);
+      }
     }
 
   }

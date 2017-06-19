@@ -41,6 +41,7 @@ void Stage1Scene::game_logic(){
   //Para alguem que ler: esse codigo ja ta uma merda msm algumas duplicaçoes de codigo não vai piorar essa cagada
   if(player_controller->attack){
     if(bullet1->state() == GameObject::State::disabled){
+      bulletDir1 = !player_controller->isRight;
       bullet1->main_positionX = player->main_positionX + player->main_width;
       bullet1->main_positionY = player->main_positionY;
     }
@@ -48,7 +49,7 @@ void Stage1Scene::game_logic(){
   }
    
   if(bullet1->state() == GameObject::State::enabled){
-    if(!player_controller->isRight){
+    if(bulletDir1){
       bullet1->main_positionX += 30;
     }
     else{
@@ -65,6 +66,7 @@ void Stage1Scene::game_logic(){
 
   if(soldier1_controller->attack){
     if(bullet2->state() == GameObject::State::disabled){
+      bulletDir2 = !soldier1_controller->isRight;
       bullet2->main_positionX = soldier1->main_positionX + player->main_width;
       bullet2->main_positionY = soldier1->main_positionY;
     }
@@ -72,7 +74,7 @@ void Stage1Scene::game_logic(){
   }
    
   if(bullet2->state() == GameObject::State::enabled){
-    if(!soldier1_controller->isRight){
+    if(bulletDir2){
       bullet2->main_positionX += 30;
     }
     else{

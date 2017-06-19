@@ -10,7 +10,7 @@ class Soldier : public Component{
 
 public:
   Soldier(GameObject &_main_game_object, std::string component_id, GameObject *player, AnimationControllerComponent *monster_controler):
-    Component(_main_game_object,component_id), m_player(player), m_monster_controler(monster_controler),dy(0){}
+    Component(_main_game_object,component_id), m_player(player), m_monster_controler(monster_controler),dy(0),timestep(0){}
   ~Soldier();
 
   bool init();
@@ -27,6 +27,7 @@ private:
   const int ground = 700;
   const int gravity = 1;
   const float jumpF = 2;
+  int unsigned timestep;
   float dy;
 
   bool returnRight;
