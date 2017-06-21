@@ -13,6 +13,7 @@
 #include "player.hpp"
 #include "soldier.hpp"
 #include "plataform.hpp"
+#include "returnMenu.hpp"
 
 using namespace engine;
 
@@ -206,6 +207,31 @@ int main(int, char **){
     stage1.add_game_object(ground_stage1);
     stage1.add_game_object(background_stage1);
     //==================================== GAME LOOP ============================================
+
+    //-----------------------------------game over and you win scene ------------------------------//
+    Scene you_win("you_win");
+
+    GameObject win("you_win");
+    ImageComponent win_image(win,"win ","assets/sprites/win.png");
+    ReturnMenu win_return (win, "win_return");
+    
+    win.add_component(win_image);
+    win.add_component(win_return);
+    you_win.add_game_object(win);
+
+    Scene game_over("game_over");
+
+    GameObject lose("you_lose");
+    ImageComponent lose_image(lose,"lose ","assets/sprites/game_over.png");
+    ReturnMenu lose_return (lose, "lose_return");
+
+    lose.add_component(lose_image);
+    lose.add_component(lose_return);
+    game_over.add_game_object(lose);
+   
+   
+    Game::instance.add_scene(you_win);
+    Game::instance.add_scene(game_over);
 
     Game::instance.run();
 

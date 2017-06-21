@@ -16,6 +16,12 @@ float dy = 0;
 bool Player::init(){
   back->imagePart->x = 0;
   isRight = true;
+  life = 6;
+  walkR =false;
+  walkL =false;
+  jump =false;
+  attack =false;
+  damage = false;
   return true;
 }
 
@@ -34,6 +40,21 @@ void Player::update(){
        Game::instance.collision_manager->checkCollision(_main_game_object,"bullet")){
           animCtrl->play_animation("player_damage");
 	  damage = true;
+
+	  if(time_damage < Game::instance.timer->getTicks()){
+	    life --;
+	    time_damage = Game::instance.timer->getTicks()+ 1000;
+	    std::cout<<life<<std::endl;
+	    if(life<=0){
+	      walkR =false;
+	      walkL =false;
+	      jump =false;
+	      attack =false;
+	      damage = false;
+	      animCtrl->play_animation("player_idle");
+	      Game::instance.change_scene("game_over");
+	    }
+	  }
     }
 
     if(Game::instance.timer->getTicks() > Ttime){

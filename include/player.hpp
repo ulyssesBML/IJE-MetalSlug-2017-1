@@ -53,6 +53,9 @@ class Player : public Component{
         ImageComponent *back;
         GameObject *ground;
 
+        int life;
+        int time_damage;
+
 
         float dy;
 };

@@ -58,7 +58,7 @@ void MonsterAI::update(){
   processPos();
   }
   else{
-    Game::instance.change_scene("Main Menu");
+    Game::instance.change_scene("you_win");
   }
 }
 void MonsterAI::processPos()
